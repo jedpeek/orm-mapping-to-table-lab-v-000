@@ -8,7 +8,8 @@ class Student
   end
 
   def attributes
-    @name, @grade, @id
+    @name
+    @grade
     @id
   end
 
