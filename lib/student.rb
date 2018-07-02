@@ -36,7 +36,7 @@ class Student
       grade TEXT
       )
       SQL
-  DB[:conn].execute(sql)
+  DB[:conn].execute("DROP TABLE students")
   end
 
 
