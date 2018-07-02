@@ -7,6 +7,15 @@ class Student
     @grade = grade
   end
 
+  def save
+   sql = <<-SQL
+     INSERT INTO students (name, album) 
+     VALUES (?, ?)
+   SQL
+
+   DB[:conn].execute(sql, self.name, self.album)
+ end
+
 
   def self.create_table
   sql =  <<-SQL
